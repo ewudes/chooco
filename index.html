@@ -2,10 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
@@ -45,10 +42,9 @@
             id="filter__overdue"
             class="filter__input visually-hidden"
             name="filter"
-            disabled
           />
           <label for="filter__overdue" class="filter__label"
-            >Просрочено <span class="filter__overdue-count count">0</span></label
+            >Прошедшие <span class="filter__overdue-count count">5</span></label
           >
           <input
             type="radio"
@@ -65,9 +61,10 @@
             id="filter__favorites"
             class="filter__input visually-hidden"
             name="filter"
+            disabled
           />
-          <label for="filter__favorites" class="filter__label"
-            >Избранное <span class="filter__favorites-count count">1</span></label
+          <label for="filter__future" class="filter__label"
+            >Будущие <span class="filter__future-count count">0</span></label
           >
           <input
             type="radio"
@@ -75,8 +72,8 @@
             class="filter__input visually-hidden"
             name="filter"
           />
-          <label for="filter__repeating" class="filter__label"
-            >Повторяющиеся <span class="filter__repeating-count count">1</span></label
+          <label for="filter__favorites" class="filter__label"
+            >Избранное <span class="filter__favorites-count count">1</span></label
           >
           <input
             type="radio"
@@ -89,7 +86,7 @@
           >
         </section>
 
-        <section class="board container">
+        <section class="board">
           <div class="board__filter-list">
             <span class="board__filter--title">Сортировка:</span>
             <a href="#" class="board__filter">По умолчанию</a>
@@ -98,7 +95,6 @@
           </div>
 
           <div class="board__tasks">
-
             <article class="card">
               <div class="card__form">
                 <div class="card__inner">
@@ -114,6 +110,12 @@
                       class="card__btn card__btn--favorites"
                     >
                       В избранное
+                    </button>
+                    <button
+                      type="button"
+                      class="card__btn card__btn--remove"
+                    >
+                      Удалить
                     </button>
                   </div>
 
@@ -123,15 +125,7 @@
                   </div>
 
                   <div class="card__settings">
-                    <div class="card__details">
-                      <div class="card__dates">
-                        <div class="card__date-deadline">
-                          <p class="card__input-deadline-wrap">
-                            <span class="card__date">23 Сентября</span>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
+                    <span class="card__date">23 Сентября</span>
                   </div>
                 </div>
               </div>
@@ -152,6 +146,48 @@
                       class="card__btn card__btn--favorites"
                     >
                       В избранное
+                    </button>
+                    <button
+                      type="button"
+                      class="card__btn card__btn--remove"
+                    >
+                      Удалить
+                    </button>
+                  </div>
+
+                  <div class="card__textarea-wrap">
+                    <p class="card__text--theme">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <p class="card__text--comment">Donec sollicitudin molestie malesuada. Proin eget tortor risus. Nulla porttitor accumsan tincidunt.</p>
+                  </div>
+
+                  <div class="card__settings">
+                    <span class="card__date">23 Сентября</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card__form">
+                <div class="card__inner">
+                  <div class="card__control">
+                    <button type="button" class="card__btn card__btn--edit">
+                      Редактировать
+                    </button>
+                    <button type="button" class="card__btn card__btn--archive">
+                      В архив
+                    </button>
+                    <button
+                      type="button"
+                      class="card__btn card__btn--favorites"
+                    >
+                      В избранное
+                    </button>
+                    <button
+                      type="button"
+                      class="card__btn card__btn--remove"
+                    >
+                      Удалить
                     </button>
                   </div>
 
@@ -161,15 +197,7 @@
                   </div>
 
                   <div class="card__settings">
-                    <div class="card__details">
-                      <div class="card__dates">
-                        <div class="card__date-deadline">
-                          <p class="card__input-deadline-wrap">
-                            <span class="card__date">23 Сентября</span>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
+                    <span class="card__date">23 Сентября</span>
                   </div>
                 </div>
               </div>
@@ -190,6 +218,12 @@
                       class="card__btn card__btn--favorites"
                     >
                       В избранное
+                    </button>
+                    <button
+                      type="button"
+                      class="card__btn card__btn--remove"
+                    >
+                      Удалить
                     </button>
                   </div>
 
@@ -199,15 +233,7 @@
                   </div>
 
                   <div class="card__settings">
-                    <div class="card__details">
-                      <div class="card__dates">
-                        <div class="card__date-deadline">
-                          <p class="card__input-deadline-wrap">
-                            <span class="card__date">23 Сентября</span>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
+                    <span class="card__date">23 Сентября</span>
                   </div>
                 </div>
               </div>
@@ -229,34 +255,389 @@
                     >
                       В избранное
                     </button>
+                    <button
+                      type="button"
+                      class="card__btn card__btn--remove"
+                    >
+                      Удалить
+                    </button>
                   </div>
 
                   <div class="card__textarea-wrap">
                     <p class="card__text--theme">Quisque velit nisi, pretium ut lacinia in, elementum id enim.</p>
-                    <p class="card__text--comment">Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Curabitur aliquet quam id dui posuere blandit. Sed porttitor lectus nibh.</p>
+                    <p class="card__text--comment">Curabitur nibh.</p>
                   </div>
 
                   <div class="card__settings">
-                    <div class="card__details">
-                      <div class="card__dates">
-                        <div class="card__date-deadline">
-                          <p class="card__input-deadline-wrap">
-                            <span class="card__date">23 Сентября</span>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
+                    <span class="card__date">23 Сентября</span>
                   </div>
                 </div>
               </div>
             </article>
 
+            <article class="card">
+              <div class="card__form">
+                <div class="card__inner">
+                  <div class="card__control">
+                    <button type="button" class="card__btn card__btn--edit">
+                      Редактировать
+                    </button>
+                    <button type="button" class="card__btn card__btn--archive">
+                      В архив
+                    </button>
+                    <button
+                      type="button"
+                      class="card__btn card__btn--favorites"
+                    >
+                      В избранное
+                    </button>
+                    <button
+                      type="button"
+                      class="card__btn card__btn--remove"
+                    >
+                      Удалить
+                    </button>
+                  </div>
+
+                  <div class="card__textarea-wrap">
+                    <p class="card__text--theme">Nulla quis lorem ut libero malesuada feugiat.</p>
+                    <p class="card__text--comment">Curabitur aliquet quam id dui posuere blandit. Pellentesque in ipsum id orci porta dapibus. Nulla quis lorem ut libero malesuada feugiat.</p>
+                  </div>
+
+                  <div class="card__settings">
+                    <span class="card__date">23 Сентября</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card__form">
+                <div class="card__inner">
+                  <div class="card__control">
+                    <button type="button" class="card__btn card__btn--edit">
+                      Редактировать
+                    </button>
+                    <button type="button" class="card__btn card__btn--archive">
+                      В архив
+                    </button>
+                    <button
+                      type="button"
+                      class="card__btn card__btn--favorites"
+                    >
+                      В избранное
+                    </button>
+                    <button
+                      type="button"
+                      class="card__btn card__btn--remove"
+                    >
+                      Удалить
+                    </button>
+                  </div>
+
+                  <div class="card__textarea-wrap">
+                    <p class="card__text--theme">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <p class="card__text--comment">Donec sollicitudin molestie malesuada. Proin eget tortor risus. Nulla porttitor accumsan tincidunt.</p>
+                  </div>
+
+                  <div class="card__settings">
+                    <span class="card__date">23 Сентября</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card__form">
+                <div class="card__inner">
+                  <div class="card__control">
+                    <button type="button" class="card__btn card__btn--edit">
+                      Редактировать
+                    </button>
+                    <button type="button" class="card__btn card__btn--archive">
+                      В архив
+                    </button>
+                    <button
+                      type="button"
+                      class="card__btn card__btn--favorites"
+                    >
+                      В избранное
+                    </button>
+                    <button
+                      type="button"
+                      class="card__btn card__btn--remove"
+                    >
+                      Удалить
+                    </button>
+                  </div>
+
+                  <div class="card__textarea-wrap">
+                    <p class="card__text--theme">Nulla porttitor accumsan tincidunt.</p>
+                    <p class="card__text--comment">Sed porttitor lectus nibh. Vivamus suscipit tortor eget felis porttitor volutpat. Pellentesque in ipsum id orci porta dapibus.</p>
+                  </div>
+
+                  <div class="card__settings">
+                    <span class="card__date">23 Сентября</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card__form">
+                <div class="card__inner">
+                  <div class="card__control">
+                    <button type="button" class="card__btn card__btn--edit">
+                      Редактировать
+                    </button>
+                    <button type="button" class="card__btn card__btn--archive">
+                      В архив
+                    </button>
+                    <button
+                      type="button"
+                      class="card__btn card__btn--favorites"
+                    >
+                      В избранное
+                    </button>
+                    <button
+                      type="button"
+                      class="card__btn card__btn--remove"
+                    >
+                      Удалить
+                    </button>
+                  </div>
+
+                  <div class="card__textarea-wrap">
+                    <p class="card__text--theme">Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.</p>
+                    <p class="card__text--comment">Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Cras ultricies ligula sed magna dictum porta. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  </div>
+
+                  <div class="card__settings">
+                    <span class="card__date">23 Сентября</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card__form">
+                <div class="card__inner">
+                  <div class="card__control">
+                    <button type="button" class="card__btn card__btn--edit">
+                      Редактировать
+                    </button>
+                    <button type="button" class="card__btn card__btn--archive">
+                      В архив
+                    </button>
+                    <button
+                      type="button"
+                      class="card__btn card__btn--favorites"
+                    >
+                      В избранное
+                    </button>
+                    <button
+                      type="button"
+                      class="card__btn card__btn--remove"
+                    >
+                      Удалить
+                    </button>
+                  </div>
+
+                  <div class="card__textarea-wrap">
+                    <p class="card__text--theme">Quisque velit nisi, pretium ut lacinia in, elementum id enim.</p>
+                    <p class="card__text--comment">Curabitur nibh.</p>
+                  </div>
+
+                  <div class="card__settings">
+                    <span class="card__date">23 Сентября</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card__form">
+                <div class="card__inner">
+                  <div class="card__control">
+                    <button type="button" class="card__btn card__btn--edit">
+                      Редактировать
+                    </button>
+                    <button type="button" class="card__btn card__btn--archive">
+                      В архив
+                    </button>
+                    <button
+                      type="button"
+                      class="card__btn card__btn--favorites"
+                    >
+                      В избранное
+                    </button>
+                    <button
+                      type="button"
+                      class="card__btn card__btn--remove"
+                    >
+                      Удалить
+                    </button>
+                  </div>
+
+                  <div class="card__textarea-wrap">
+                    <p class="card__text--theme">Nulla quis lorem ut libero malesuada feugiat.</p>
+                    <p class="card__text--comment">Curabitur aliquet quam id dui posuere blandit. Pellentesque in ipsum id orci porta dapibus. Nulla quis lorem ut libero malesuada feugiat.</p>
+                  </div>
+
+                  <div class="card__settings">
+                    <span class="card__date">23 Сентября</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card__form">
+                <div class="card__inner">
+                  <div class="card__control">
+                    <button type="button" class="card__btn card__btn--edit">
+                      Редактировать
+                    </button>
+                    <button type="button" class="card__btn card__btn--archive">
+                      В архив
+                    </button>
+                    <button
+                      type="button"
+                      class="card__btn card__btn--favorites"
+                    >
+                      В избранное
+                    </button>
+                    <button
+                      type="button"
+                      class="card__btn card__btn--remove"
+                    >
+                      Удалить
+                    </button>
+                  </div>
+
+                  <div class="card__textarea-wrap">
+                    <p class="card__text--theme">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <p class="card__text--comment">Donec sollicitudin molestie malesuada. Proin eget tortor risus. Nulla porttitor accumsan tincidunt.</p>
+                  </div>
+
+                  <div class="card__settings">
+                    <span class="card__date">23 Сентября</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card__form">
+                <div class="card__inner">
+                  <div class="card__control">
+                    <button type="button" class="card__btn card__btn--edit">
+                      Редактировать
+                    </button>
+                    <button type="button" class="card__btn card__btn--archive">
+                      В архив
+                    </button>
+                    <button
+                      type="button"
+                      class="card__btn card__btn--favorites"
+                    >
+                      В избранное
+                    </button>
+                    <button
+                      type="button"
+                      class="card__btn card__btn--remove"
+                    >
+                      Удалить
+                    </button>
+                  </div>
+
+                  <div class="card__textarea-wrap">
+                    <p class="card__text--theme">Nulla porttitor accumsan tincidunt.</p>
+                    <p class="card__text--comment">Sed porttitor lectus nibh. Vivamus suscipit tortor eget felis porttitor volutpat. Pellentesque in ipsum id orci porta dapibus.</p>
+                  </div>
+
+                  <div class="card__settings">
+                    <span class="card__date">23 Сентября</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card__form">
+                <div class="card__inner">
+                  <div class="card__control">
+                    <button type="button" class="card__btn card__btn--edit">
+                      Редактировать
+                    </button>
+                    <button type="button" class="card__btn card__btn--archive">
+                      В архив
+                    </button>
+                    <button
+                      type="button"
+                      class="card__btn card__btn--favorites"
+                    >
+                      В избранное
+                    </button>
+                    <button
+                      type="button"
+                      class="card__btn card__btn--remove"
+                    >
+                      Удалить
+                    </button>
+                  </div>
+
+                  <div class="card__textarea-wrap">
+                    <p class="card__text--theme">Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.</p>
+                    <p class="card__text--comment">Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Cras ultricies ligula sed magna dictum porta. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                  </div>
+
+                  <div class="card__settings">
+                    <span class="card__date">23 Сентября</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card__form">
+                <div class="card__inner">
+                  <div class="card__control">
+                    <button type="button" class="card__btn card__btn--edit">
+                      Редактировать
+                    </button>
+                    <button type="button" class="card__btn card__btn--archive">
+                      В архив
+                    </button>
+                    <button
+                      type="button"
+                      class="card__btn card__btn--favorites"
+                    >
+                      В избранное
+                    </button>
+                    <button
+                      type="button"
+                      class="card__btn card__btn--remove"
+                    >
+                      Удалить
+                    </button>
+                  </div>
+
+                  <div class="card__textarea-wrap">
+                    <p class="card__text--theme">Quisque velit nisi, pretium ut lacinia in, elementum id enim.</p>
+                    <p class="card__text--comment">Curabitur nibh.</p>
+                  </div>
+
+                  <div class="card__settings">
+                    <span class="card__date">23 Сентября</span>
+                  </div>
+                </div>
+              </div>
+            </article>
           </div>
           <button class="load-more" type="button">Загрузить еще</button>
         </section>
       </section>
-
-
     </main>
   </body>
 </html>
