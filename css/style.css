@@ -52,7 +52,7 @@ body {
   height: 100%;
 }
 .main__control {
-  background-color: #04396c;
+  background-color: #183A4F;
 }
 .main__wrapper {
   display: flex;
@@ -81,8 +81,8 @@ body {
   font-weight: normal;
   text-decoration: none;
   color: #ffffff;
-  border: 1px solid #04396C;
-  background-color: #04396C;
+  border: 1px solid #183A4F;
+  background-color: #183A4F;
   width: 125px;
   justify-content: center;
   padding: 5px 0;
@@ -207,8 +207,8 @@ body {
   display: flex;
   justify-content: center;
   background-color: transparent;
-  border: 2px solid #04396C;
-  color: #04396C;
+  border: 2px solid #183A4F;
+  color: #183A4F;
   font-weight: 600;
   cursor: pointer;
   margin: 0 35px 0;
@@ -314,7 +314,7 @@ body {
 }
 .card__text--theme {
   font-weight: 600;
-  color: #04396C;
+  color: #183A4F;
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 2;
