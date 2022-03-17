@@ -197,16 +197,17 @@ body {
   text-transform: uppercase;
 }
 .load-more {
-  width: 100%;
+  width: 240px;
   padding: 15px 0;
   display: flex;
   justify-content: center;
   background-color: transparent;
-  border: 1px solid #000000;
-  text-transform: uppercase;
-  box-shadow: 0 9px 38px 0 rgba(2, 2, 2, 0.15);
+  border: 2px solid #04396C;
+  color: #04396C;
+  font-weight: 600;
   cursor: pointer;
-  margin-top: auto;
+  margin: auto;
+  margin-bottom: 25px;
   outline: none;
 }
 .load-more:hover {
@@ -217,7 +218,7 @@ body {
 .card {
   position: relative;
   width: 100%;
-  min-height: 210px;
+  min-height: 150px;
   margin-bottom: 26px;
 }
 .card__inner {
@@ -227,14 +228,11 @@ body {
   bottom: 0;
   display: flex;
   flex-direction: column;
-  padding: 7px 15px;
+  padding: 7px 0;
   box-sizing: border-box;
   border-top: 2px solid #f0f0f0;
   background-color: #ffffff;
   outline: 0;
-}
-.card--deadline .card__inner {
-  box-shadow: 0 2px 38px 0 rgba(240, 0, 0, 0.19);
 }
 .card__control {
   display: flex;
@@ -291,6 +289,17 @@ body {
 .card__text::placeholder {
   color: rgba(0, 0, 0, 0.3);
 }
+.card__text--theme,
+.card__text--comment {
+  margin-top: 0;
+}
+.card__text--theme {
+  font-weight: 600;
+  color: #04396C;
+}
+.card__text--comment {
+  margin-bottom: 0;
+}
 .card__settings {
   display: flex;
   margin-top: auto;
@@ -314,10 +323,6 @@ body {
 }
 .card__date-deadline:disabled {
   display: none;
-}
-.card--deadline .card__date,
-.card--deadline .card__time {
-  color: #f11a1a;
 }
 .card__date:hover,
 .card__time:hover {
