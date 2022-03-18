@@ -11,17 +11,13 @@
 
   <body>
     <main class="main">
-      <section class="main__control control">
-        <section class="control__btn-wrap">
-          <input
-            type="radio"
-            name="control"
-            id="control__new-task"
-            class="control__input visually-hidden"
-          />
-          <label for="control__new-task" class="control__label control__label--new-task"
-            >Добавить</label
-          >
+      <section class="main__header">
+        <section class="main__header-wrap">
+          <span class="main__header-logo">SomeList</span>
+          <div class="main__header-group-lnk">
+            <a href="#" class="main__header-lnk lnk-active">События</a>
+            <a href="#" class="main__header-lnk">Архив</a>
+          </div>
         </section>
       </section>
 
@@ -75,15 +71,10 @@
           <label for="filter__favorites" class="filter__label"
             >Избранное <span class="filter__favorites-count count">1</span></label
           >
-          <input
-            type="radio"
-            id="filter__archive"
-            class="filter__input visually-hidden"
-            name="filter"
-          />
-          <label for="filter__archive" class="filter__label"
-            >Архив <span class="filter__archive-count count">115</span></label
-          >
+          <button
+            name="control"
+            class="btn-add"
+          >Создать</button>
         </section>
 
         <section class="board">
