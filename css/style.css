@@ -161,7 +161,7 @@ body {
 }
 
 .board__filter-list {
-  padding: 35px;
+  padding: 15px 40px 5px;
 }
 
 .board__filter,
@@ -195,7 +195,7 @@ body {
   min-height: 500px;
   overflow-y: scroll;
   overflow-x: hidden;
-  height: calc(100% - 150px);
+  height: calc(100% - 100px);
 }
 .board__no-tasks {
   text-align: center;
@@ -218,6 +218,10 @@ body {
 }
 .load-more:hover {
   background-color: rgba(0, 0, 0, 0.1);
+  opacity: 0.8;
+}
+.load-more:active {
+  background-color: rgba(0, 0, 0, 0.2);
   opacity: 0.8;
 }
 .card {
