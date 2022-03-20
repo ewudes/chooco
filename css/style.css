@@ -170,10 +170,16 @@ body {
 }
 .board {
   display: flex;
+  position: relative;
   flex-direction: column;
   width: 100%;
 }
-
+.board__no-events {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 .board__filter-list {
   padding: 15px 40px 10px;
 }
@@ -210,6 +216,9 @@ body {
   overflow-y: scroll;
   overflow-x: hidden;
   height: calc(100% - 110px);
+}
+.board__tasks--archive {
+  height: calc(100% - 70px);
 }
 .board__form {
   display: flex;
@@ -263,7 +272,7 @@ body {
   text-transform: uppercase;
 }
 .load-more {
-  width: 92.2%;
+  width: 93%;
   padding: 12px 0;
   display: flex;
   justify-content: center;
@@ -277,6 +286,9 @@ body {
   margin-bottom: 10px;
   outline: none;
 }
+.load-more--archive {
+  width: 94.5%;
+}
 .load-more:hover {
   background-color: rgba(0, 0, 0, 0.1);
   opacity: 0.8;
@@ -286,7 +298,7 @@ body {
   opacity: 0.8;
 }
 .card {
-  width: 212px;
+  width: calc(1/5*100% - 20px);
   min-height: 214px;
   margin: 10px;
 }
