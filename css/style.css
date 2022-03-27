@@ -22,6 +22,13 @@
   font-weight: normal;
   font-style: normal;
 }
+:root {
+  --main-bg-color: #ffffff;
+  --header-bg-color: #183A4F;
+  --extra-bg-color: #f7f5f5;
+  --accent-btn-color: #e20909;
+  --font-color: #fafafa;
+}
 html,
 body {
   height: 100%;
@@ -43,11 +50,11 @@ body {
 .main {
   display: flex;
   flex-direction: column;
-  background-color: #ffffff;
+  background-color: var(--main-bg-color);
   height: 100%;
 }
 .main__header {
-  background-color: #183A4F;
+  background-color: var(--header-bg-color);
 }
 .main__wrapper {
   display: flex;
@@ -56,7 +63,7 @@ body {
 .main__filter {
   position: relative;
   width: 310px;
-  background-color: #fafafa;
+  background-color: var(--extra-bg-color);
 }
 .main__header-wrap {
   display: flex;
@@ -65,7 +72,7 @@ body {
 .main__header-logo {
   width: 299px;
   text-align: center;
-  color: #fafafa;
+  color: var(--font-color);
   font-size: 18px;
   font-weight: 600;
   padding: 15px 0;
@@ -76,10 +83,10 @@ body {
   height: 45px;
   bottom: 10px;
   left: 50%;
-  background-color: #e20909;
+  background-color: var(--accent-btn-color);
   border: none;
   font-size: 20px;
-  color: #fafafa;
+  color: var(--font-color);
   transform: translateX(-50%);
   cursor: pointer;
 }
@@ -138,6 +145,22 @@ body {
 .filter__input:disabled + .filter__label {
   color: #e7e3e3;
 }
+.board__filter-label {
+  margin-right: 10px;
+  font-size: 14px;
+}
+.board__filter-label:hover {
+  opacity: 0.7;
+  transition: opacity 0.2s ease-out;
+  text-decoration: underline;
+}
+.board__filter:not(:disabled):checked + .board__filter-label {
+  font-weight: 900;
+}
+.board__filter:not(:disabled):checked + .board__filter-label:hover {
+  font-weight: 900;
+  opacity: 1;
+}
 .count {
   margin-left: auto;
 }
@@ -194,7 +217,7 @@ body {
   flex-direction: column;
   width: 60%;
   height: 100%;
-  background-color: #fafafa;
+  background-color: var(--extra-bg-color);
   margin: 25px;
   padding: 25px;
 }
@@ -255,7 +278,7 @@ body {
   padding: 12px 0;
   display: flex;
   justify-content: center;
-  background-color: #fafafa;
+  background-color: var(--extra-bg-color);
   border: 2px solid #e9e7e7;
   color: #183A4F;
   font-weight: 600;
@@ -286,7 +309,6 @@ body {
   min-height: 214px;
   box-sizing: border-box;
   border: 2px solid #f0f0f0;
-  background-color: #ffffff;
   outline: 0;
 }
 .card__control {

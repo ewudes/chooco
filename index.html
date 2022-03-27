@@ -80,9 +80,28 @@
         <section class="board">
           <div class="board__filter-list">
             <span class="board__filter--title">Сортировка:</span>
-            <a href="#" class="board__filter">По умолчанию</a>
-            <a href="#" class="board__filter">Сначала новые</a>
-            <a href="#" class="board__filter">Сначала старые</a>
+            <input
+              type="radio"
+              id="board__filter-default"
+              class="board__filter visually-hidden"
+              name="board-filter"
+              checked
+            />
+            <label for="board__filter-default" class="board__filter-label">По умолчанию</label>
+            <input
+              type="radio"
+              id="board__filter-new"
+              class="board__filter visually-hidden"
+              name="board-filter"
+            />
+            <label for="board__filter-new" class="board__filter-label">Сначала новые</label>
+            <input
+              type="radio"
+              id="board__filter-old"
+              class="board__filter visually-hidden"
+              name="board-filter"
+            />
+            <label for="board__filter-old" class="board__filter-label">Сначала старые</label>
           </div>
 
           <div class="board__events">
