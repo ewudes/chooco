@@ -1,0 +1,8 @@
+@import "../global/variables";
+
+.hero {
+  background-image: url("../../img/bg/patern.png");
+  background-repeat: no-repeat;
+  background-color: $hero-bg-color;
+  background-position: right bottom;
+}
